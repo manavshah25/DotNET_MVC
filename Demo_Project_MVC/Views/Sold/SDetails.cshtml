@@ -1,0 +1,43 @@
+﻿@model Demo_Project_MVC.Models.Sold
+
+@{
+    ViewBag.Title = "SDetails";
+}
+
+<h2>SDetails</h2>
+
+<div>
+    <h4>Sold</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SQunt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SQunt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "SEdit", "Sold", new { id = Model.Id }, new { @class = "btn btn-success" }) |
+    @Html.ActionLink("Cancel", "DisplaySold", "Sold", new { @class = "btn btn-danger" })
+
+</p>

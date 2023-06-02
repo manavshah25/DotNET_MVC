@@ -1,0 +1,69 @@
+﻿@model Demo_Project_MVC.Models.RegisterViewModel
+
+@{
+    ViewBag.Title = "User Registration";
+}
+<style>
+    body {
+        background-image: url('https://media.istockphoto.com/id/1333211562/vector/cyber-network-protection-future-technology-background.jpg?b=1&s=612x612&w=0&k=20&c=vO4ikHNDSBCsjJT7bskcDGA6hnvfAg0V6tsrQmRap0w='),
+    }
+</style>
+<body>
+    <div class="container mt-5">
+
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-12 col-md-12 col-lg-4">
+                <h1 class="mb-3">User Registration</h1>
+
+                <div class="row">
+                    <div class=".col-md-12">
+                        <form method="post" asp-controller="account" asp-action="register">
+                            <div asp-validation-summary="All" class="text-success">
+                                <div class="form-group">
+                                    <label asp-for="Name"></label>
+                                    <input asp-for="Name" class="form-control" />
+                                    <span asp-validation-for="Name" class="text-success"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Username"></label>
+                                    <input asp-for="Username" class="form-control" />
+                                    <span asp-validation-for="Username" class="text-success"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Email"></label>
+                                    <input asp-for="Email" class="form-control" />
+                                    <span asp-validation-for="Email" class="text-success"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Mobile"></label>
+                                    <input asp-for="Mobile" class="form-control" />
+                                    <span asp-validation-for="Mobile" class="text-success"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Password"></label>
+                                    <input asp-for="Password" class="form-control" />
+                                    <span asp-validation-for="Password" class="text-success"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ConfirmPassword"></label>
+                                    <input asp-for="ConfirmPassword" class="form-control" />
+                                    <span asp-validation-for="ConfirmPassword" class="text-success"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Address" class="control-label"></label>
+                                    <textarea asp-for="Address" class="form-control"></textarea>
+                                    <span asp-validation-for="Address" class="text-success"></span>
+                                </div>
+
+                            </div>
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>

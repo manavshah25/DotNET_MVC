@@ -1,0 +1,35 @@
+﻿@model Demo_Project_MVC.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PQunt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PQunt)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "UpdateProduct", "Product", new { id = Model.Id }, new { @class = "btn btn-success" }) |
+    @Html.ActionLink("Cancel", "DisplayProduct", "Product", new { @class = "btn btn-danger" })
+
+</p>
